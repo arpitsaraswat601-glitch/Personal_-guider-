@@ -1,0 +1,122 @@
+/* --- PERSONAL GUIDER: CORE DESIGN --- */
+:root {
+    --accent: #00A3FF; /* Blue from your logo */
+    --gold: #FFD700;   /* Gold from your logo */
+    --bg: #000000;
+    --card-bg: rgba(255, 255, 255, 0.05);
+}
+
+* {
+    margin: 0; padding: 0; box-sizing: border-box;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: white;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* --- HEADER --- */
+.main-header {
+    padding: 30px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 163, 255, 0.2);
+}
+
+.user-profile { display: flex; align-items: center; gap: 15px; }
+
+.avatar-ring {
+    width: 65px; height: 65px;
+    border-radius: 50%;
+    border: 2px solid var(--accent);
+    padding: 2px;
+    box-shadow: 0 0 15px var(--accent);
+}
+
+#user-avatar {
+    width: 100%; height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.user-identity h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.3rem;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+/* --- CONTENT AREA --- */
+#main-content {
+    padding: 20px;
+    height: calc(100vh - 160px);
+    overflow-y: auto;
+}
+
+.glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Timer Styling */
+#main-timer {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: white;
+    text-shadow: 0 0 10px var(--accent);
+}
+
+/* Stats Grid */
+.stats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+.stat-box {
+    background: var(--card-bg);
+    padding: 15px;
+    border-radius: 12px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+}
+
+.stat-box.gold { border-bottom-color: var(--gold); }
+
+/* --- NAVIGATION --- */
+.bottom-nav {
+    position: fixed;
+    bottom: 0; width: 100%;
+    height: 70px;
+    background: #080808;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-btn {
+    background: none;
+    border: none;
+    color: #666;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.nav-btn.active {
+    color: var(--accent);
+    text-shadow: 0 0 5px var(--accent);
+}
+
+/* Utils */
+.hidden { display: none !important; }

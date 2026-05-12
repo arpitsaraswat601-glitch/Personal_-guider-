@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>PERSONAL GUIDER | ARPIT EDITION</title>
+    <!-- High-End Gaming Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- SYSTEM INITIALIZATION: Jab app khulega toh load screen aayegi -->
+    <div id="loader" class="overlay">
+        <div class="scanner"></div>
+        <h2 class="glitch">VANGUARD SYSTEM ONLINE...</h2>
+    </div>
+
+    <div id="app-shell" class="hidden">
+        
+        <!-- HEADER: Tera Logo aur Identity -->
+        <header class="main-header">
+            <div class="user-profile">
+                <div class="avatar-ring">
+                    <!-- Tera powerful chain-breaking logo -->
+                    <img id="user-avatar" src="1000019877.png" alt="Arpit Vanguard">
+                </div>
+                <div class="user-identity">
+                    <h1 id="display-name">ARPIT</h1>
+                    <div class="rank-tag">
+                        <span class="pulse-dot"></span> 
+                        RANK: <span id="rank-name">ELITE WARRIOR</span>
+                    </div>
+                </div>
+            </div>
+            <div class="power-stats">
+                <div class="level-box">
+                    <small>SYSTEM LEVEL</small>
+                    <div id="lvl-val">10</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- COMMAND CENTER -->
+        <main id="main-content">
+            
+            <!-- THE STREAK TIMER -->
+            <section class="timer-section glass-effect">
+                <div class="tag">STREAK PROTOCOL</div>
+                <div id="main-timer">00:00:00:00</div>
+                <div class="xp-bar"><div id="xp-fill"></div></div>
+            </section>
+
+            <!-- NEURAL ADVICE: Yahan se guidance milegi -->
+            <section class="ai-box" onclick="triggerGuidance()">
+                <div class="ai-header">🧠 NEURAL GUIDANCE</div>
+                <p id="ai-text">System Synced. Waiting for Operator Command.</p>
+            </section>
+
+            <!-- POWER NODES: Academics & Strength -->
+            <div class="stats-grid">
+                <div class="stat-card node-blue" onclick="addXP('study')">
+                    <span class="icon">📖</span>
+                    <h3>ACADEMICS</h3>
+                    <p>Board Goal: 99%</p>
+                    <div class="xp-count"><span id="pts-study">0</span> XP</div>
+                </div>
+                <div class="stat-card node-gold" onclick="addXP('strength')">
+                    <span class="icon">💪</span>
+                    <h3>STRENGTH</h3>
+                    <p>Arm Wrestle: 48kg</p>
+                    <div class="xp-count"><span id="pts-strength">0</span> XP</div>
+                </div>
+            </div>
+
+            <!-- MISSIONS: Tere Real-Life Goals -->
+            <section class="quest-section glass-effect">
+                <h3>ACTIVE MISSIONS</h3>
+                <div class="quest-item">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        10th Board Daily Revision
+                    </label>
+                </div>
+                <div class="quest-item">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        Heavy Forearm Training
+                    </label>
+                </div>
+                <div class="quest-item">
+                    <label class="container">
+                        <input type="checkbox">
+                        <span class="checkmark"></span>
+                        AI Content Prompt Design
+                    </label>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- NAVIGATION: Footer Buttons -->
+        <nav class="bottom-nav">
+            <button onclick="changeTab('home')" class="nav-btn active">BASE</button>
+            <button onclick="changeTab('roadmap')" class="nav-btn">ROADMAP</button>
+            <button onclick="changeTab('ai-lab')" class="nav-btn">AI LAB</button>
+            <button onclick="changeTab('settings')" class="nav-btn">SYSTEM</button>
+        </nav>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
